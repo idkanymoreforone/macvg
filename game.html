@@ -24,11 +24,11 @@
     <title></title>
     <link
       rel="shortcut icon"
-      href="/logo.png"
+      href="./logo.png"
       type="image/x-icon"
       class="favicon"
     />
-    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="./game.css" />
   </head>
   <body>
     <div class="game-container">
@@ -42,11 +42,11 @@
             <div class="leftest">
               <h5 class="title" id="game-name"></h5>
             </div>
-            <img src="/macvg/media/star-regular.svg" id="star" />
-            <img src="/macvg/media/share-solid.svg" id="share" />
-            <img src="/macvg/media/download.svg" id="download" />
-            <img src="/macvg/media/flag.svg" id="report" />
-            <img src="/macvg/media/expand.svg" id="fullscreen" />
+            <img src="./macvg/media/star-regular.svg" id="star" />
+            <img src="./macvg/media/share-solid.svg" id="share" />
+            <img src="./macvg/media/download.svg" id="download" />
+            <img src="./macvg/media/flag.svg" id="report" />
+            <img src="./macvg/media/expand.svg" id="fullscreen" />
           </div>
         </div>
         <div class="more-info">
@@ -73,16 +73,16 @@
       </div>
       <div class="right">
         <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/media/macvg-logo.png" alt="" />
+          <a href="./macvg/" class="logo">
+            <img src="./macvg/media/macvg-logo.png" alt="" />
           </a>
           <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/recent.html" class="nav-link">Recent</a>
-            <a href="/macvg/originals/atomic/" class="nav-link">Atomic</a>
-            <a href="/macvg/originals/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
+            <a href="./macvg/new.html" class="nav-link">New</a>
+            <a href="./macvg/trending.html" class="nav-link">Trending</a>
+            <a href="./macvg/recent.html" class="nav-link">Recent</a>
+            <a href="./macvg/originals/atomic/" class="nav-link">Atomic</a>
+            <a href="./macvg/originals/macboard/" class="nav-link">MacBoard</a>
+            <a href="./macvg/settings.html" class="nav-link">Settings</a>
           </div>
           <div class="copyright">© 2024 <a href="/">MacWeb</a></div>
         </div>
@@ -132,7 +132,7 @@
         newArray = [];
       const params = new URLSearchParams(window.location.search);
       const targetUrl = params.get("target");
-      if (!targetUrl) window.location.href = "/macvg/";
+      if (!targetUrl) window.location.href = "./macvg/";
       const gameName = document.getElementById("game-name");
       const gameCategory = document.getElementById("game-category");
       const gameRelease = document.getElementById("game-release");
