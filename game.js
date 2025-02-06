@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameID = params.get("target");
   let newArray = [];
   const download = document.getElementById("download");
-  fetch("games.json")
+  fetch("./games.json")
     .then((response) => response.json())
     .then((dataa) => {
       let data = dataa.games;
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fullScreen.addEventListener("click", function () {
     if (document.fullscreenElement) {
       document.exitFullscreen();
-      fullScreen.src = "/macvg/media/expand.svg";
+      fullScreen.src = "./media/expand.svg";
     } else {
-      fullScreen.src = "/macvg/media/compress.svg";
+      fullScreen.src = "./media/compress.svg";
       gameFrame.requestFullscreen();
     }
   });
@@ -67,15 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let existingData = localStorage.getItem("favorites");
   let favoritesArray = existingData.split(",");
   if (favoritesArray.includes(gameID)) {
-    star.src = "/macvg/media/star-solid.svg";
+    star.src = "./media/star-solid.svg";
   }
   star.addEventListener("click", function () {
     if (star.src.includes("star-regular")) {
-      star.src = "/macvg/media/star-solid.svg";
+      star.src = "./media/star-solid.svg";
       favoritesArray.push(gameID);
       localStorage.setItem("favorites", favoritesArray.join(","));
     } else {
-      star.src = "/macvg/media/star-regular.svg";
+      star.src = "./media/star-regular.svg";
       const index = favoritesArray.indexOf(gameID);
       favoritesArray.splice(index, 1);
       localStorage.setItem("favorites", favoritesArray.join(","));
