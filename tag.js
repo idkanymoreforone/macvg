@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       break;
   }
   let newArray = [];
-  fetch("games.json")
+  fetch("./games.json")
     .then((response) => response.json())
     .then((dataa) => {
       let data = dataa.games;
